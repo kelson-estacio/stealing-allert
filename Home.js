@@ -3,25 +3,17 @@ import { StyleSheet, Text, View, TextInput, Button, PermissionsAndroid } from 'r
 import { TextInputMask } from 'react-native-masked-text';
 import { useNavigation } from '@react-navigation/native';
 
-//Definição das variaveis
 export default function Home() {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const navigation = useNavigation();
 
-
-  //Requisitar permissoes
   useEffect(() => {
-    requestPermission();
+    requestLocationAndSMSPermissions();
   }, []);
 
-  // Remove a barra de navegação
-  navigation.setOptions({
-    headerShown: false, 
-  });
-
-  const requestPermission = async () => {
+  const requestLocationAndSMSPermissions = async () => {
     try {
       const granted = await PermissionsAndroid.requestMultiple([
         PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
@@ -40,8 +32,6 @@ export default function Home() {
     }
   };
 
-
-  //Dados inseridos pelo usuário: telefone e password
   const handleActivate = () => {
     if (phoneNumber.length === 15 && password === confirmPassword) {
       const formattedPhoneNumber = `+55${phoneNumber.replace(/\D/g, '')}`; // Remove caracteres especiais e mantém o +
@@ -51,7 +41,6 @@ export default function Home() {
     }
   };
 
-  //configuraçoes dos inputs
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Alerta de roubo</Text>
@@ -87,7 +76,6 @@ export default function Home() {
   );
 }
 
-//Definição dos layouts
 const styles = StyleSheet.create({
   container: {
     flex: 1,
