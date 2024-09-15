@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react';
-
+// preservar as variaveis entre telas
 export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {

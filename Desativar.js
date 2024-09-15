@@ -17,14 +17,14 @@ export default function Desativar({ route }) {
     startMonitoring();
     return () => stopMonitoring();
   }, []);
-
+//funcao para ativar o monitoramento da velocidade do dispositivo
   const startMonitoring = () => {
     setIsMonitoring(true);
     Geolocation.watchPosition(
       (position) => {
         const { speed } = position.coords;
-        setSpeed(speed * 3.6); // Converte m/s para km/h
-        if (speed * 3.6 >= 5) {
+        setSpeed(speed * 3.6); 
+        if (speed * 3.6 >= 1) { 
           sendSMSAlert(position.coords);
         }
       },
@@ -39,7 +39,7 @@ export default function Desativar({ route }) {
     setIsMonitoring(false);
     Geolocation.clearWatch();
   };
-
+// funcao para enviar a msg SMS
   const sendSMSAlert = (coords) => {
     const message = `Alerta de roubo: https://www.google.com/maps?q=${coords.latitude},${coords.longitude}`;    SendDirectSms(phoneNumber, message)
       .then((res) => console.log("SMS enviado com sucesso", res))
@@ -71,7 +71,7 @@ export default function Desativar({ route }) {
     </View>
   );
 }
-
+//layout
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -10,10 +10,10 @@ export default function Home() {
   const navigation = useNavigation();
 
   useEffect(() => {
-    requestLocationAndSMSPermissions();
+    requestPermissions();
   }, []);
-
-  const requestLocationAndSMSPermissions = async () => {
+//funçao para requisitar as permissoes
+  const requestPermissions = async () => {
     try {
       const granted = await PermissionsAndroid.requestMultiple([
         PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
@@ -31,16 +31,16 @@ export default function Home() {
       console.warn(err);
     }
   };
-
+  //validacao dos inputs
   const handleActivate = () => {
     if (phoneNumber.length === 15 && password === confirmPassword) {
-      const formattedPhoneNumber = `+55${phoneNumber.replace(/\D/g, '')}`; // Remove caracteres especiais e mantém o +
+      const formattedPhoneNumber = `+55${phoneNumber.replace(/\D/g, '')}`; 
       navigation.navigate('Desativar', { phoneNumber: formattedPhoneNumber, savedPassword: password });
     } else {
       alert('Por favor, verifique as informações inseridas.');
     }
   };
-
+//manipulacao dos inputs
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Alerta de roubo</Text>
@@ -75,7 +75,7 @@ export default function Home() {
     </View>
   );
 }
-
+//layout
 const styles = StyleSheet.create({
   container: {
     flex: 1,
