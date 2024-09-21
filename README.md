@@ -29,8 +29,17 @@ npm install react-native-permissions
 npm install react-native-send-direct-sms
 ```
 
-
 ### 5.Masked Text Input (para formatar o número de telefone):
 ```
 npm install react-native-masked-text
+```
+
+### 6. Gerencia as ações de toque na tela (adicionada para impedir o retorno para a tela inicial)
+```
+npm install react-native-gesture-handler
+```
+
+### 6. Gerencia as ações de toque na tela (adicionada para impedir o retorno para a tela inicial)
+```
+npm install react-native-gesture-handler
 ```
