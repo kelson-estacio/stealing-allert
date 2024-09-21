@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/kelson-estacio/stealing-allert/blob/master/imagens/imagem1.jpeg">
+<img src="https://github.com/kelson-estacio/stealing-allert/blob/master/imagens/imagem1.jpeg" width="300" height="200">
 </p>
 
 # <h1>Projeto React Native</h1>
