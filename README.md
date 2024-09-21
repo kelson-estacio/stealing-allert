@@ -1,5 +1,5 @@
 <p align="center">
-![imagem 01](imagens/imagem1.jpeg=300x200)
+![[https://github.com/kelson-estacio/stealing-allert/blob/master/imagens/imagem1.jpeg]]
 </p>
 
 # <h1>Projeto React Native</h1>
