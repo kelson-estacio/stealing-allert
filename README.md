@@ -1,6 +1,6 @@
-
-![imagem 01](imagens/imagem01.jpeg =300x200)
-
+<p align="center">
+![imagem 01](imagens/imagem1.jpeg=300x200)
+</p>
 
 # <h1>Projeto React Native</h1>
 
