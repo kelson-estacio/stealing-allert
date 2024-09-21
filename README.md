@@ -1,4 +1,7 @@
 
+![imagem 01](imagens/imagem01.jpeg =300x200)
+
+
 # <h1>Projeto React Native</h1>
 
 
@@ -43,3 +46,6 @@ npm install react-native-gesture-handler
 ```
 npm install react-native-gesture-handler
 ```
+
+
+
