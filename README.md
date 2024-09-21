@@ -12,7 +12,7 @@
     <tr>
       <td><img src="https://github.com/kelson-estacio/stealing-allert/blob/master/imagens/imagem5.jpeg"></td>
       <td><img src="https://github.com/kelson-estacio/stealing-allert/blob/master/imagens/imagem6.jpeg"></td>
-      <td><img src="https://github.com/kelson-estacio/stealing-allert/blob/master/imagens/imagem7.jpeg"></td>
+      <td><img src="https://github.com/kelson-estacio/stealing-allert/blob/master/imagens/imagem6.jpeg"></td>
     </tr>
   </table>
 
